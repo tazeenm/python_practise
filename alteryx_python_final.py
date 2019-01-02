@@ -3,11 +3,12 @@ A Python Script that takes an excel sheet as input and returns the number of dup
 '''
 
 import pandas as pd
+#Can remove this
 import xlrd
 import numpy as np
 
 #Input file (to be taken from alteryx workflow)
-#Alteryx.read("#1")
+#df1 = Alteryx.read("#1")
 input_file = 'test.xlsx'
 xlsx = pd.ExcelFile(input_file)
 df1 = pd.read_excel(xlsx, 'Sheet1')
@@ -19,6 +20,7 @@ Compare filename and ignore the fields
 '''
 
 # Add the Parameter file path here
+#df2 = Alteryx.read(#2)
 parameter_file = r'C:\Users\Tazeen.Munnavar\OneDrive\Documents\Alteryx\Critical Reports\User_Parameter.xlsx'
 xlsx1 = pd.ExcelFile(parameter_file)
 df2 = pd.read_excel(xlsx1, 'Sheet1')
